@@ -1,0 +1,31 @@
+@import '~material-design-icons/iconfont/material-icons.css';
+
+.nav-bar {
+    position: fixed;
+    width: 68px;
+    height: 100vh;
+    background-color: #fff;
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, .04);
+}
+
+.disclosure-button {
+    position: absolute;
+    height: 68px;
+    width: 100%;
+    border-top: 1px solid #eee;
+    background-color: #fafafa;
+    text-align: right;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.chevron-right {
+    margin: 22px 0;
+    padding-right: 22px;
+}
+
+.material-icons {
+    color: #888888;
+    user-select: none;
+    -moz-user-select: none;
+}
