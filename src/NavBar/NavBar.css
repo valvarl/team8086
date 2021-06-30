@@ -6,6 +6,11 @@
     height: 100vh;
     background-color: #fff;
     box-shadow: 0 0 10px 0 rgba(0, 0, 0, .04);
+    transition: all 0.2s;
+}
+
+.nav-bar.active {
+    width: 350px;
 }
 
 .disclosure-button {
@@ -19,7 +24,7 @@
     cursor: pointer;
 }
 
-.chevron-right {
+.icon-wrapper {
     margin: 22px 0;
     padding-right: 22px;
 }

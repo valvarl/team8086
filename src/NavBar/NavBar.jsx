@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useState } from "react";
 import "./NavBar.css";
 
 const NavBar = () => {
+  const [menuActive, setMenuActive] = useState(false);
+
   return (
-    <div className="nav-bar">
+    <div className={menuActive ? "nav-bar active" : "nav-bar"}>
       <p>Hello NavBar</p>
-      <div className="disclosure-button">
-        <span className="chevron-right material-icons">chevron_right</span>
+      <div
+        className="disclosure-button"
+        onClick={() => setMenuActive(!menuActive)}
+      >
+        <span className="icon-wrapper material-icons">{menuActive ? "chevron_left" : "chevron_right"}</span>
       </div>
     </div>
   );
