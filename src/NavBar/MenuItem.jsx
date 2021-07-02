@@ -2,27 +2,30 @@ import React, { useRef } from "react";
 import "./NavBar.css";
 import useHover from "./hooks/useHover";
 
-const MenuItem = (props) => {
+const MenuItem = ({ id, Icon, caption, active, selected, selectMenuItem }) => {
   const ref = useRef();
   const isHovering = useHover(ref);
 
   return (
-    <li ref={ref} className={isHovering ? "menuitem active" : "menuitem"}>
+    <li
+      ref={ref}
+      className={isHovering || selected ? "menuitem active" : "menuitem"}
+      onClick={() => selectMenuItem(id)}
+    >
       <div
         className={
-          isHovering
+          isHovering || selected
             ? "navigation-icon-wrapper active"
             : "navigation-icon-wrapper"
         }
       >
-        <img className="navigation-icon" src={props.icon} alt="React Logo" />
+        <Icon className="navigation-icon" fill={selected ? "black" : "#444"} />
       </div>
-      <div className="navigation-caption">
-        {props.active ? (
-          <span style={{ whiteSpace: "nowrap" }}>{props.caption}</span>
-        ) : (
-          ""
-        )}
+      <div
+        className="navigation-caption"
+        style={{ color: selected ? "black" : "#444" }}
+      >
+        {active ? <span>{caption}</span> : ""}
       </div>
     </li>
   );

@@ -1,14 +1,21 @@
 @font-face {
   font-family: 'Lato';
-  src: local('Lato Regular'), local('Lato-Regular'), url('fonts/latoregular.woff2') format('woff2'), url('fonts/latoregular.woff') format('woff'), url('fonts/latoregular.ttf') format('truetype');
+  src: local('Lato Regular'), local('Lato-Regular'), url('fonts/Lato/latoregular.woff2') format('woff2'), url('fonts/Lato/latoregular.woff') format('woff'), url('fonts/Lato/latoregular.ttf') format('truetype');
   font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Arvo';
+  src: local('Arvo Bold'), local('Arvo-Bold'), url('fonts/Arvo/arvobold.woff2') format('woff2'), url('fonts/Arvo/arvobold.woff') format('woff'), url('fonts/Arvo/arvobold.ttf') format('truetype');
+  font-weight: 700;
   font-style: normal;
 }
 
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', 'Lato',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
