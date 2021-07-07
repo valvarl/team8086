@@ -50,33 +50,35 @@ const NavBar = () => {
   });
 
   return (
-    <div className={menuActive ? "nav-bar active" : "nav-bar"}>
-      <div className="nav-scroller">
-        <div className="header">
-          {menuActive ? (
-            <span className="logo-title">Team 8086</span>
-          ) : (
-            <img className="logo" src={logo} alt="React logo" />
-          )}
-        </div>
+      <aside className={menuActive ? "nav-bar active menu" : "nav-bar menu"}>
+        <div className={menuActive ? "nav-bar active" : "nav-bar"}>
+          <div className="nav-scroller">
+            <div className="header">
+              {menuActive ? (
+                  <span className="logo-title">Team 8086</span>
+              ) : (
+                  <img className="logo" src={logo} alt="React logo" />
+              )}
+            </div>
 
-        <ul className="nav-list">
-          {menuItems.slice(0, 1)}
-          <div className="divider" />
-          {menuItems.slice(1, 6)}
-          <div className="divider" />
-          {menuItems.slice(6)}
-        </ul>
-      </div>
-      <div
-        className="disclosure-button"
-        onClick={() => setMenuActive(!menuActive)}
-      >
+            <ul className="nav-list">
+              {menuItems.slice(0, 1)}
+              <div className="divider" />
+              {menuItems.slice(1, 6)}
+              <div className="divider" />
+              {menuItems.slice(6)}
+            </ul>
+          </div>
+          <div
+              className="disclosure-button"
+              onClick={() => setMenuActive(!menuActive)}
+          >
         <span className="icon-wrapper material-icons">
           {menuActive ? "chevron_left" : "chevron_right"}
         </span>
-      </div>
-    </div>
+          </div>
+        </div>
+      </aside>
   );
 };
 

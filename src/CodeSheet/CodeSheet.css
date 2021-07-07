@@ -1,0 +1,108 @@
+
+.page-content {
+    display: grid;
+    padding: 80px 50px;
+    background-color: #fcfcfc;
+    min-height: calc(100vh - 50px);
+}
+
+.scrollable {
+    overflow-y: scroll !important;
+    overflow-x: hidden;
+    scrollbar-width: thin;
+    transition: scrollbar-color 1s;
+    width: 100%;
+}
+.scrollable,
+.scrollable:hover {
+    scrollbar-color: rgba(0, 0, 0, 0.15) hsla(0, 0%, 100%, 0);
+}
+.scrollable::-webkit-scrollbar {
+    width: 10px;
+}
+.scrollable::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.15);
+    background-clip: content-box;
+}
+.scrollable::-webkit-scrollbar-thumb,
+.scrollable:hover::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 8px;
+    border: 2px solid transparent;
+}
+
+.scrollable::-webkit-scrollbar-track {
+    border-radius: unset;
+}
+
+.scroll-mask {
+    position: fixed;
+    background: #fff;
+    height: 100%;
+    top: 0;
+    right: 0;
+    width: 11px;
+    transition: opacity 1s !important;
+    -webkit-transition: opacity 1s, visibility 1s !important;
+    opacity: 1;
+    z-index: 2;
+}
+
+.scrollable-container {
+    display: grid;
+    position: relative;
+}
+
+.scrollable-container:hover .scroll-mask {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transition: opacity 0.2s, visibility 0.2s;
+}
+
+.contentColumn {
+    min-height: 100vh;
+    display: grid;
+    background-color: #fcfcfc;
+    overflow: hidden;
+}
+
+.contentColumn .stretcher {
+    display: grid;
+    grid-template-rows: auto minmax(-webkit-min-content, 1fr) auto;
+    grid-template-rows: auto minmax(min-content, 1fr) auto;
+}
+
+.contentColumn .stretcher.leftDrawerCollapsed {
+    display: block;
+}
+
+
+.jss4 {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 4px;
+    padding-right: 4px;
+}
+
+.sheet-wrapper {
+    max-width: 1328px;
+    margin: 0 auto;
+    min-height: 100vh;
+}
+
+.content-sheet {
+
+    width: 100%;
+    max-width: 964px;
+
+
+}
+
+.code-sheet {
+    background: #fff 0 0 no-repeat padding-box;
+    border: 1px solid #e8e8e8;
+    border-radius: 8px;
+    box-shadow: 0 0 12px rgba(0,0,0,.04);
+    height: 222px;
+}
+

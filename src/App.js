@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
 import NavBar from "./NavBar/NavBar";
-import JsDos from "./JsDos/JsDos";
+import CodeSheet from "./CodeSheet/CodeSheet";
 
 function App() {
   return (
     <div className="App">
       <NavBar />
-      <JsDos />
+      <CodeSheet />
     </div>
   );
 }
