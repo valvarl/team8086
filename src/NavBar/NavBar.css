@@ -6,22 +6,33 @@
   height: 100%;
   margin-top: -.1px;
   padding-top: .1px;
+  transition: all .2s;
+}
+
+.drawerStart {
+  max-width: 350px !important;
+  width: 350px !important;
+}
+
+.drawerCollapsed {
+  min-width: 68px !important;
+  width: 68px !important;
 }
 
 .nav-bar {
   position: fixed;
-  width: 67px;
+  width: 68px;
   height: 100vh;
   background-color: #fff;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.04);
   transition: all 0.2s;
   user-select: none;
   -moz-user-select: none;
   border-left: 1px solid #eee;
-}
 
-.nav-bar.active {
-  width: 350px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.04) !important;
+  opacity: 1 !important;
+  visibility: visible !important;
+  z-index: 100;
 }
 
 .header {
@@ -50,6 +61,9 @@
   display: block;
   clear: both;
   height: 1px;
+  position: relative;
+  top: -.02em;
+  vertical-align: middle;
 }
 
 .disclosure-button {
@@ -128,12 +142,13 @@
 }
 
 .nav-scroller {
-  height: 90vh;
+  height: 91vh;
   overflow-y: scroll;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
   flex: 1 1;
+  transition: all 0.2s;
 }
 
 .nav-scroller::-webkit-scrollbar {
