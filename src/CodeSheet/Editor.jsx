@@ -2,9 +2,9 @@ import React from 'react';
 import 'codemirror/lib/codemirror.css'
 import 'codemirror/theme/eclipse.css'
 import 'codemirror/mode/tasm/tasm'
-import { Controlled as ControlledEditor } from "react-codemirror2";
+import {Controlled as ControlledEditor} from "react-codemirror2";
 
-export default function Editor({ language, value, onChange }) {
+export default function Editor({language, value, onChange}) {
     function handleChange(editor, data, value) {
         onChange(value);
     }

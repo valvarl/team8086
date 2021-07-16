@@ -48,13 +48,11 @@ const Sheet = () => {
         'end start')
 
     return (
-        <div>
-            <div className='code-sheet'>
-                <div className='code-sheet-header' />
-                <section className='code-window'>
-                    <Editor language='tasm' value={code} onChange={setCode}/>
-                </section>
-            </div>
+        <div className='code-sheet'>
+            <div className='code-sheet-header' />
+            <section className='code-window'>
+                <Editor language='tasm' value={code} onChange={setCode}/>
+            </section>
         </div>
     );
 };
